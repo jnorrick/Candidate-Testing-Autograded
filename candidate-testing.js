@@ -31,7 +31,6 @@ function askQuestion() {
 
   for (let i = 0; i < questions.length; i++){
     candidateAnswers[i] = input.question(questions[i]);
-    // candidateAnswers.push(input.question(questions[i]));
   }
 }
 
@@ -43,7 +42,7 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < correctAnswers.length; i++) {
     if (correctAnswers[i].toString().toLowerCase() === candidateAnswers[i].toString().toLowerCase()){
       numCorrectAnswers += 1;
-      console.log( `${candidateAnswers[i]} is correct!`);
+      console.log(`${candidateAnswers[i]} is correct!`);
     } else{
       console.log(`${candidateAnswers[i]} is incorrect. Correct answer: ${correctAnswers[i]}.`)
     }
